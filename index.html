@@ -1,46 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="main.css">
  <title>Which High School Musical character are you?</title>
- 
 </head>
+
 <body>
  <div id="main">
  <div id="header"><h1>Which High School Musical character are you?</h1></div>
 
  <form  id="form1">
  <p>What's your favorite subject?</p></td><td>
-<label><input type="radio" name="school" value="1" />Music</label><br>
-<label><input type="radio" name="school" value="2" />Science</label><br>
-<label><input type="radio" name="school" value="3" />Gym</label><br>
-<label><input type="radio" name="school" value="4" />Lunch</label><br>
-<label><input type="radio" name="school" value="5" />Drama</label><br>
+    <label><input type="radio" name="school" value="1" />Music</label><br>
+    <label><input type="radio" name="school" value="2" />Science</label><br>
+    <label><input type="radio" name="school" value="3" />Gym</label><br>
+    <label><input type="radio" name="school" value="4" />Lunch</label><br>
+    <label><input type="radio" name="school" value="5" />Drama</label><br>
 
 <p>What does your social scene look like?</p>
-<label><input type="radio" name="social" value="1" />I have no friends</label><br>
-<label><input type="radio" name="social" value="2" />I have a small group of close friends</label><br>
-<label><input type="radio"  name="social" value="3" />I have a decent sized group of friends</label><br>
-<label><input type="radio"  name="social" value="4" />I know a lot of people</label><br>
-<label><input type="radio"  name="social" value="5" />I'm surrounded by hordes of my fans</label><br>
+    <label><input type="radio" name="social" value="1" />I have no friends</label><br>
+    <label><input type="radio" name="social" value="2" />I have a small group of close friends</label><br>
+    <label><input type="radio" name="social" value="3" />I have a decent sized group of friends</label><br>
+    <label><input type="radio" name="social" value="4" />I know a lot of people</label><br>
+    <label><input type="radio" name="social" value="5" />I'm surrounded by hordes of my fans</label><br>
 
 <p>Which of the following would you rather be doing?</p>
-<label><input type="radio" name="rather" value="1" />Making something creative alone in my room</label><br>
-<label><input type="radio" name="rather" value="2" />Learning more about subjects I’m passionate about</label><br>
-<label><input type="radio" name="rather" value="3" />Hanging out with friends playing games</label><br>
-<label><input type="radio" name="rather" value="4" />Finding more ways to make people laugh</label><br>
-<label><input type="radio" name="rather" value="5" />Performing in front of a large crowd</label><br>
-
-
+    <label><input type="radio" name="rather" value="1" />Making something creative alone in my room</label><br>
+    <label><input type="radio" name="rather" value="2" />Learning more about subjects I’m passionate about</label><br>
+    <label><input type="radio" name="rather" value="3" />Hanging out with friends playing games</label><br>
+    <label><input type="radio" name="rather" value="4" />Finding more ways to make people laugh</label><br>
+    <label><input type="radio" name="rather" value="5" />Performing in front of a large crowd</label><br>
 <br>
+
 <button type="submit" value="Submit">Submit</button>
 </td></tr>
 </form>
 
-<p id="answer"></p>
 <p id="answer2"></p>
 </div>
-
-
 
 <script>
   document.getElementById("form1").onsubmit=function() {
@@ -48,36 +45,30 @@
 	 var social = parseInt(document.querySelector('input[name = "social"]:checked').value);
 	 var rather = parseInt(document.querySelector('input[name = "rather"]:checked').value);
 	 var total= school + social + rather;
-	   
-	  
-	   document.getElementById("answer").innerHTML = total;
-	   
-	   
 
-	   if(total < 5) {
-document.getElementById("answer2").innerHTML = "You got Kelsi.";
-}
+     if(total < 5) {
+        document.getElementById("answer2").innerHTML = "You got Kelsi.";
+     }
 
-   if(total >=5 && total < 8) {
-document.getElementById("answer2").innerHTML = "You got Gabriella.";
-}
+     if(total >=5 && total < 8) {
+        document.getElementById("answer2").innerHTML = "You got Gabriella.";
+     }
 	
-	if(total >=8 && total < 11) {
-document.getElementById("answer2").innerHTML = "You got Troy.";
-}   
+	 if(total >=8 && total < 11) {
+        document.getElementById("answer2").innerHTML = "You got Troy.";
+     }   
     
-    if(total >=11 && total < 14) {
-document.getElementById("answer2").innerHTML = "You got Ryan.";
-} 
+     if(total >=11 && total < 14) {
+        document.getElementById("answer2").innerHTML = "You got Ryan.";
+     } 
 
-    if(total >= 15 && total < 16) {
-document.getElementById("answer2").innerHTML = "You got Sharpay.";
-} 
+     if(total >= 15 && total < 16) {
+        document.getElementById("answer2").innerHTML = "You got Sharpay.";
+     } 
 		   
-	   return false; // required to not refresh the page; just leave this here
-	   };// end the submit function
+	 return false; // required to not refresh the page; just leave this here
+  };// end the submit function
 	
-
  </script>
 </body>
 </html>
