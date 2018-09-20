@@ -31,7 +31,7 @@ body {
 }
 
 label {
-    width: 150px;
+    width: 90%;
     display: inline-block;
 }
 
@@ -39,4 +39,25 @@ button {
     display: block;
     margin-top: 20px;
 
+}
+
+p {
+    margin-top:0px;
+    margin-bottom:0px;
+    padding-top:0px;
+    padding-bottom:0px;
+}
+
+#answer2 {
+    font-size:350%;
+    font-weight:bold;
+    text-align:center;
+}
+
+#result_pic img{
+    clear:both;
+    margin-right:auto;
+    margin-left:auto;
+    margin-bottom:30px;
+    width:90%;
 }

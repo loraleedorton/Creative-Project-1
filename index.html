@@ -10,23 +10,23 @@
  <div id="header"><h1>Which High School Musical character are you?</h1></div>
 
  <form  id="form1">
- <p>What's your favorite subject?</p></td><td>
+ <h2>What's your favorite subject?</h2></td><td>
     <label><input type="radio" name="school" value="1" />Music</label><br>
     <label><input type="radio" name="school" value="2" />Science</label><br>
     <label><input type="radio" name="school" value="3" />Gym</label><br>
     <label><input type="radio" name="school" value="4" />Lunch</label><br>
     <label><input type="radio" name="school" value="5" />Drama</label><br>
 
-<p>What does your social scene look like?</p>
+<h2>What does your social scene look like?</h2>
     <label><input type="radio" name="social" value="1" />I have no friends</label><br>
     <label><input type="radio" name="social" value="2" />I have a small group of close friends</label><br>
     <label><input type="radio" name="social" value="3" />I have a decent sized group of friends</label><br>
     <label><input type="radio" name="social" value="4" />I know a lot of people</label><br>
     <label><input type="radio" name="social" value="5" />I'm surrounded by hordes of my fans</label><br>
 
-<p>Which of the following would you rather be doing?</p>
+<h2>Which of the following would you rather be doing?</h2>
     <label><input type="radio" name="rather" value="1" />Making something creative alone in my room</label><br>
-    <label><input type="radio" name="rather" value="2" />Learning more about subjects I’m passionate about</label><br>
+    <label><input type="radio" name="rather" value="2" />Learning more about subjects I am passionate about</label><br>
     <label><input type="radio" name="rather" value="3" />Hanging out with friends playing games</label><br>
     <label><input type="radio" name="rather" value="4" />Finding more ways to make people laugh</label><br>
     <label><input type="radio" name="rather" value="5" />Performing in front of a large crowd</label><br>
@@ -37,33 +37,68 @@
 </form>
 
 <p id="answer2"></p>
+<div id="result_pic">
+<img  id="Kelsi" style="display:none"
+         src="https://i.pinimg.com/originals/9f/e7/65/9fe7651b85b1d80760a75e8c4dc872b3.png">
+         
+<img  id="Gabriella" style="display:none"
+         src="https://vignette.wikia.nocookie.net/disney/images/9/92/Gabriella_Montez_in_High_School_Musical_3.png/revision/latest?cb=20151004174007">
+         
+<img  id="Troy" style="display:none"
+         src="https://images-production.freetls.fastly.net/uploads/posts/image/139207/troy.jpg">
+         
+<img  id="Ryan" style="display:none"
+         src="http://cdn.playbuzz.com/cdn/e73aeaa6-4234-4db6-89f1-e94d7131e458/ec9b8e41-5780-4431-81ee-276eacb832a3.jpg">
+         
+<img  id="Sharpay" style="display:none"
+         src="https://cdn-hit.scadigital.io/media/15530/sharpay.jpg?preset=MainImage">
 </div>
-
+         
 <script>
+
+function removeOldImage() {
+    document.getElementById("Kelsi").style.display='none';
+    document.getElementById("Gabriella").style.display='none';
+    document.getElementById("Troy").style.display='none';
+    document.getElementById("Ryan").style.display='none';
+    document.getElementById("Sharpay").style.display='none';
+}
+
   document.getElementById("form1").onsubmit=function() {
+     removeOldImage();
 	 var school = parseInt(document.querySelector('input[name = "school"]:checked').value);
 	 var social = parseInt(document.querySelector('input[name = "social"]:checked').value);
 	 var rather = parseInt(document.querySelector('input[name = "rather"]:checked').value);
 	 var total= school + social + rather;
 
      if(total < 5) {
-        document.getElementById("answer2").innerHTML = "You got Kelsi.";
-     }
+        document.getElementById("answer2").innerHTML = "You got... Kelsi!";
+        document.getElementById("Kelsi").style.display='inline-block';
+        document.getElementById("Kelsi").scrollIntoView({behavior:'smooth'});
+        }
 
      if(total >=5 && total < 8) {
-        document.getElementById("answer2").innerHTML = "You got Gabriella.";
+        document.getElementById("answer2").innerHTML = "You got... Gabriella!";
+        document.getElementById("Gabriella").style.display='block';
+        document.getElementById("Gabriella").scrollIntoView({behavior:'smooth'});
      }
 	
 	 if(total >=8 && total < 11) {
-        document.getElementById("answer2").innerHTML = "You got Troy.";
+        document.getElementById("answer2").innerHTML = "You got... Troy!";
+        document.getElementById("Troy").style.display='block';
+        document.getElementById("Troy").scrollIntoView({behavior:'smooth'});
      }   
     
      if(total >=11 && total < 14) {
-        document.getElementById("answer2").innerHTML = "You got Ryan.";
+        document.getElementById("answer2").innerHTML = "You got... Ryan!";
+        document.getElementById("Ryan").style.display='block';
+        document.getElementById("Ryan").scrollIntoView({behavior:'smooth'});
      } 
 
      if(total >= 15 && total < 16) {
-        document.getElementById("answer2").innerHTML = "You got Sharpay.";
+        document.getElementById("answer2").innerHTML = "You got... Sharpay!";
+        document.getElementById("Sharpay").style.display='block';
+        document.getElementById("Sharpay").scrollIntoView({behavior:'smooth'});
      } 
 		   
 	 return false; // required to not refresh the page; just leave this here
